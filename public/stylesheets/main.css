@@ -1,0 +1,21 @@
+.thumbnail img {
+	width: 100%;
+}
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail .caption {
+	padding: 9px;
+}
+
+#delete-form {
+	display: inline;
+}
+#footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+	color: black;
+}

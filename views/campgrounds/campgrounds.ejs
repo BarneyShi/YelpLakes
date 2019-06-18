@@ -1,0 +1,50 @@
+<% include ../partials/header.ejs %>
+
+    <div class="container">
+        <header class="jumbotron">
+            <h1>
+                Welcome To YelpLake
+            </h1>
+            <p>
+                All the lakes you need to visit in Canada
+            </p>
+            <p>
+                <a href="/campgrounds/new" class="btn btn-primary btn-large">Add New Campground</a>
+
+            </p>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>
+                    Canada's most beautiful lakes
+                </h3>
+            </div>
+        </div>
+
+		<div class="row text-center">
+			<p>
+            <% campgrounds.forEach(function(campground) { %>
+                <div class="col-md-3 col-sm-6">
+					
+					<div class="thumbnail">
+                    <img src=" <%= campground.image %> ">
+						<div class="caption">
+						<h4>
+                        <%= campground.name %>
+                    </h4>
+					</div>
+						
+						<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+						
+					</div>
+					
+                </div>
+
+                <%							}); %>
+        </p>
+		</div>
+        
+    </div>
+
+    <% include ../partials/footer.ejs %>
