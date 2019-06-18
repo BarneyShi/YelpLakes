@@ -15,7 +15,15 @@ var methodOverride = require("method-override");
 var flash = require("connect-flash");
 //seedDB();
 
-mongoose.connect("mongodb://localhost:27017/yelp_lakes", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Zhuangzhuang:sz19950221@zhuangzhuang-nhqti.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useFindAndModify: false,
+	useCreateIndex: true
+}).then(function(){
+	console.log("Connected to database in MongoDB atlas!");
+}).catch(function(err){
+	console.log("ERROR", err.message);
+});
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
