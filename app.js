@@ -56,6 +56,8 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use(authRoutes);
 
-app.listen(3000, function() {
-	console.log("YelpCamp server connected");
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || "127.0.0.1";
+app.listen(port,function(){
+    console.log("YelpLakes server has started .... at port "+ port+" ip: "+ip);
 });
