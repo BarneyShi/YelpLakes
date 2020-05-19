@@ -9,3 +9,4 @@ I clicked with Node.js and it's now my favourite backend language.
 
 **Backend**: Node.js, Express.js. MongoDB, Passport-local strategy authentication. 
 
+**Features**: Authenticated users can post new photographs of lakes, comments and delete their own pictures/comments.
